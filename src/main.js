@@ -4,7 +4,7 @@ let basket = JSON.parse(localStorage.getItem("data")) || [];
 let shopItemsData = [];
 
 
-fetch("http://localhost:3000/clothes") 
+fetch("https://backend-server-3alw.onrender.com/api/clothes") 
   .then((response) => response.json())
   .then((data) => {
     shopItemsData = data;
