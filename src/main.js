@@ -3,12 +3,12 @@ let shop = document.getElementById("shop");
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 let shopItemsData = [];
 
-// Fetch JSON data
+
 fetch("http://localhost:3000/clothes") 
   .then((response) => response.json())
   .then((data) => {
     shopItemsData = data;
-    generateShop(); // Call generateShop after data is fetched
+    generateShop(); 
   })
   .catch((error) => console.error("Error fetching data:", error));
 
